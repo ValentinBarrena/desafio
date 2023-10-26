@@ -17,7 +17,6 @@ app.get('/products', async (req, res) => {
     res.send({ products });
 });
 
-// Ruta para obtener un producto por su ID
 app.get('/products/:pid', async (req, res) => {
     const productId = parseInt(req.params.pid);
     const fileContents = await fs.promises.readFile('./products.json', 'utf-8');
